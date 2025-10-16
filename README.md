@@ -9,15 +9,14 @@ This Repository contains some basic workflows that will trigger for all 4 availa
 * **Runner Label Dissallow** - Blocks workflow runs that attempt to run on specified runner labels
 * **Secret Exfiltration Policy** - Blocks workflows where a non-default branch's workflow file is attempting to access secrets and differes from default branch
 
-## Setting up your environment
+## Setting up and Testing Policies
 Triggering workflow run policies is very straight forward:
-* Set up a policy from the Workflow Run Policies tab on the StepSecurity dashboard
-* Trigger a workflow that fails that policy
-* Observe the cancellation on the non-compliant workflow
+* Set up a policy from the Workflow Run Policies tab on the StepSecurity dashboard for each policy type
+* Trigger a workflow that fails for each respective policy type and observe the cancellation on the non-compliant workflow
 
 Below are details on how to set up a rule for each policy type
 
-## Compromised Actions Policy 
+### Compromised Actions Policy 
 1) Create a Workflow Run Policy on app.stepsecurity.io
 2) Run the workflow [compromised action.yml] and observe the job cancellation
 
