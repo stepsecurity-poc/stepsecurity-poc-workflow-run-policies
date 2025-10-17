@@ -16,11 +16,20 @@ Triggering workflow run policies is very straight forward:
 
 Below are details on how to set up a rule for each policy type
 
-### Compromised Actions Policy 
-1) Create a Workflow Run Policy on app.stepsecurity.io
-2) Run the workflow [compromised action.yml] and observe the job cancellation
+### 1. Compromised Actions Policy 
+* Create a Workflow Run Policy on app.stepsecurity.io [here]()
+* Ensure the policy is set as a **Compromised Actions Policy** and apply it to the repository **workflow-run-policy-workflows**
+* Run the workflow [compromised-action.yml]() and observe the job cancellation
 
+### 2. Allowed Actions Policy
+* Create a Workflow Run Policy on app.stepsecurity.io [here]()
+* Ensure the policy is set as a **Allowed Actions Policy** and apply it to the repository **workflow-run-policy-workflows**. You can delete this policy afterwards so it does not block other actions from running. 
+* Run the workflow [allowed-action-policy.yml]() and observe the job cancellation
 
+### 3. Runner Label Policy 
+* Create a Workflow Run Policy on app.stepsecurity.io [here]()
+* Ensure the policy is set as a **Runner Label Policy** and apply it to the repository **workflow-run-policy-workflows**. Set the disallowed runner label as 'windows-latest'
+* Run the workflow [runner-label-block.yml]() and observe the job cancellation
 
 
  
