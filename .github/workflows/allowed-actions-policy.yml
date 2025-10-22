@@ -1,0 +1,17 @@
+name: Workflow Run Policy Block Simulation - allowed action policy
+
+on:
+  workflow_dispatch:
+
+jobs:
+  workflow-policy-block-disallowed-action:
+
+  
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up ubuntu-latest
+        run: echo "success"
+
+   #Block based on an action that is not in allow list   
+      - name: Use a disallowed action 
+        uses: docker/setup-buildx-action@v3

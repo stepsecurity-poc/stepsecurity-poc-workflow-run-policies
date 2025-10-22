@@ -1,0 +1,13 @@
+name: Workflow Run Policy Block Simulation - runner label block
+
+on:
+  workflow_dispatch:
+
+jobs:
+  workflow-policy-block-runner-label:
+  
+    #Block based on dissallowed runner label - set policy to block windows-latest 
+    runs-on: windows-latest
+    steps:
+      - name: Set up windows-latest
+        run: echo "success"
