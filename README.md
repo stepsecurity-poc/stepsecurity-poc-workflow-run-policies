@@ -13,13 +13,15 @@ This Repository contains some basic workflows that will trigger for all 4 availa
 Triggering workflow run policies is very straight forward:
 * Set up a policy from the Workflow Run Policies tab on the StepSecurity dashboard for each policy type
 * Trigger a workflow that fails for each respective policy type and observe the cancellation on the non-compliant workflow
+* Optionally, triggered any one of the workflows via a PR - this also comments the PR with failure context which can be seen here
 
-Below are details on how to set up a rule for each policy type
+Below are details on how to set up a rule for each policy type and trigger a detection
 
 ### 1. Compromised Actions Policy 
 * Create a Workflow Run Policy on app.stepsecurity.io [here]()
 * Ensure the policy is set as a **Compromised Actions Policy** and apply it to the repository **workflow-run-policy-workflows**
 * Run the workflow [compromised-action.yml]() and observe the job cancellation
+* This workflow also triggers on pull_request - take a look at the PR details for failure context 
 
 ### 2. Allowed Actions Policy
 * Create a Workflow Run Policy on app.stepsecurity.io [here]()
