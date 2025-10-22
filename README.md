@@ -33,6 +33,12 @@ Below are details on how to set up a rule for each policy type and trigger a det
 * Ensure the policy is set as a **Runner Label Policy** and apply it to the repository **workflow-run-policy-workflows**. Set the disallowed runner label as 'windows-latest'
 * Run the workflow [runner-label-block.yml]() and observe the job cancellation
 
+* ### 4. Secret Exfiltration Policy
+* Create a Workflow Run Policy on app.stepsecurity.io [here]()
+* Ensure the policy is set as a **Secret Exfiltration Policy** and apply it to the repository **workflow-run-policy-workflows**
+* **Create a new branch** with the `secret-exfiltration-workflow.yml` (you can open a PR to see the PR comment context)
+* Within the new branch, make a dummy commit to trigger the workflow. This simulates a workflow in a non-default branch that attempts to export all repository secrets
+
 
  
 
