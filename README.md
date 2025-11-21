@@ -47,12 +47,12 @@ The Runner Label Policy blocks workflows from running that attempt to run on a r
 
 ### 4. Secret Exfiltration Policy
 
-The secret exfiltration policy blocks secret access on **non-default branches** unless the workflow **matches the default branch** or has **explicit approval**. This test workflow dumps all secrets using `toJSON(secrets)` and uploads them as an artifact to simulate a secret-exfiltration attack. It requires you run this workflow on a new, non-default branch. 
+The secret exfiltration policy blocks secret access on **non-default branches** unless the workflow **matches the default branch** or has **explicit approval**. This test workflow dumps all secrets using `toJSON(secrets)` and uploads them as an artifact to simulate a secret-exfiltration attack. **This workflow must run on non-default branch**. 
 
 * Create a Workflow Run Policy on app.stepsecurity.io under **Workflow Run Policies → Policies → Create Policy** 
 * Ensure the policy is set as a **Secret Exfiltration Policy** and apply to your repository
-* **Create a new branch** that contains the [secret-exfiltration-workflow.yml](https://github.com/stepsecurity-poc/stepsecurity-poc-workflow-run-policies/blob/main/.github/workflows/secret-exfiltration.yml). You can also open a PR to see the PR comment context
-* **From the new branch**, make a dummy commit (add a space to any file and commit) to trigger the workflow. This simulates a workflow in a non-default branch that attempts to access repository secrets
+* **Create a new branch** OR if you have forked the repository to test, the secret-exfiltration-branch contains the [secret-exfiltration-workflow.yml](https://github.com/stepsecurity-poc/stepsecurity-poc-workflow-run-policies/blob/main/.github/workflows/secret-exfiltration.yml).
+* **From the new branch**, make a dummy commit (add a space to any file and commit) to trigger the workflow. You can also open a PR to see the PR comment context. This simulates a workflow in a non-default branch that attempts to access repository secrets
 
 
  ## Observing Results 
