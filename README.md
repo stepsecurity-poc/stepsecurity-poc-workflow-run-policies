@@ -51,7 +51,7 @@ The secret exfiltration policy blocks secret access on **non-default branches** 
 
 * Create a Workflow Run Policy on app.stepsecurity.io under **Workflow Run Policies → Policies → Create Policy** 
 * Ensure the policy is set as a **Secret Exfiltration Policy** and apply to your repository
-* **Create a new branch** OR if you have forked the repository to test, the secret-exfiltration-branch contains the [secret-exfiltration-workflow.yml](https://github.com/stepsecurity-poc/stepsecurity-poc-workflow-run-policies/blob/main/.github/workflows/secret-exfiltration.yml).
+* **Create a new branch** OR if you have forked the repository to test, the secret-exfil branch contains the [secret-exfiltration.yml](https://github.com/step-security-poc/stepsecurity-poc-workflow-run-policies/blob/secret-exfil-branch/.github/workflows/secret-exfiltration.yml).
 * **From the new branch**, make a dummy commit (add a space to any file and commit) to trigger the workflow. You can also open a PR to see the PR comment context. This simulates a workflow in a non-default branch that attempts to access repository secrets
 
 
